@@ -2,7 +2,9 @@
   /* Colors */
   --bg-header: #282828;
   --bg-body: #f5f5f5;
-  --clr-logo: #f5f5f5;
+  --bg-banner: #cd6858;
+  --bg-chatbox: #dda15e;
+  --clr-text: #f5f5f5;
 
   /* Font Style / Size */
   --font-body: "Montserrat", sans-serif;
@@ -74,6 +76,10 @@ a {
   display: flex;
 }
 
+.jc-sb {
+  justify-content: space-between;
+}
+
 .ai-c {
   align-items: center;
 }
@@ -100,13 +106,17 @@ header {
   }
 
   .logo {
-    color: var(--clr-logo);
+    color: var(--clr-text);
     font-size: var(--fs-sm);
     font-weight: var(--fw-700);
   }
 
   .icon {
     width: var(--icon-size);
+  }
+
+  .hamburger-menu {
+    margin-left: auto;
   }
 }
 
@@ -123,15 +133,55 @@ main {
   }
 
   .item {
+    position: relative;
+
     .item-img {
       width: 800px;
+    }
+
+    .img-banner {
+      position: absolute;
+      top: 0;
+      display: inline-block;
+      padding: 10px;
+      background-color: var(--bg-banner);
+      color: var(--clr-text);
     }
 
     .caption {
       margin: 0 25px;
 
-      /* p {
-      } */
+      .item-btn {
+        padding: 10px 15px;
+        font-weight: var(--fw-700);
+        background-color: var(--bg-banner);
+        color: var(--clr-text);
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
     }
+  }
+}
+
+/* Chat Box */
+/* -------------------------------------------------------------- */
+
+.chatbox-bg {
+  position: fixed;
+  bottom: 6px;
+  right: 6px;
+
+  display: flex;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  box-shadow: 1px 1px 5px #999;
+  background-color: var(--bg-chatbox);
+  cursor: pointer;
+
+  .chatbox-img {
+    margin: auto;
+    width: 50%;
   }
 }
